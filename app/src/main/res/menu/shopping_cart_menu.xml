@@ -1,0 +1,14 @@
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/assign_customer"
+        android:title="Search"
+        android:icon="@drawable/baseline_person_add_24"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/clear_cart"
+        android:title="Sync"
+        android:icon="@drawable/baseline_delete_sweep_24"
+        app:showAsAction="ifRoom" />
+</menu>

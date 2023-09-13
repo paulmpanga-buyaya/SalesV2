@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CashPaymentFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        android:theme="@style/Theme.Sales.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/cash_payment_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:elevation="0dp"
+            app:popupTheme="@style/Theme.Sales.AppBarOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Amount Due TextView -->
+    <TextView
+        android:id="@+id/amountDueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center_horizontal"
+        android:text="23,000"
+        android:textSize="42sp"
+        android:textStyle="bold" />
+
+    <!-- Amount Due TextView -->
+    <TextView
+        android:id="@+id/amountDueHintTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Total amount due"
+        android:textSize="16sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/amountReceivedTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Cash received">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cashReceived"
+            android:inputType="number"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/receivedCash"
+        style="@style/SquareCornerMaterialButton"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="received" />
+
+</LinearLayout>

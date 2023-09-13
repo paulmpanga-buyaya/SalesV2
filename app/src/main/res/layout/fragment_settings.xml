@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SettingsFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        android:theme="@style/Theme.Sales.AppBarOverlay"
+        android:layout_alignParentTop="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/settings_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:elevation="0dp"
+            app:popupTheme="@style/Theme.Sales.AppBarOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/settingsParentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/left_and_right_margin"
+        android:layout_marginTop="@dimen/layout_top_marin"
+        android:layout_marginRight="@dimen/left_and_right_margin"
+        android:background="@color/grey_200"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:id="@+id/out_layout"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/currentUserDetailAndSignOutButton"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:layout_height="wrap_content">
+
+            <!-- Date -->
+            <TextView
+                android:id="@+id/currentUserTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="paulmpanga@gmail.com"
+                android:layout_marginBottom="8dp"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Button -->
+            <Button
+                android:id="@+id/signOutButton"
+                style="@style/SquareCornerMaterialButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign Out"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

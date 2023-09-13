@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/buttonCash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cash" />
+
+    <Button
+        android:id="@+id/buttonMTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MTN MoMo" />
+
+    <Button
+        android:id="@+id/buttonAirtel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Airtel Money" />
+
+    <Button
+        android:id="@+id/buttonCredit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Credit" />
+
+</LinearLayout>

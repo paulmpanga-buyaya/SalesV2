@@ -1,0 +1,17 @@
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/sync_items"
+        android:title="Sync"
+        android:icon="@drawable/baseline_cloud_sync_24"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/filter_items"
+        android:title="filer"
+        android:orderInCategory="100"
+        android:icon="@drawable/baseline_filter_list_24"
+        app:showAsAction="ifRoom" />
+
+</menu>

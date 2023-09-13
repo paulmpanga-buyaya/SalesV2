@@ -1,0 +1,24 @@
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/view_shopping_cart"
+        android:title="View shopping cart"
+        android:orderInCategory="100"
+        android:icon="@drawable/baseline_shopping_cart_24"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/sync_inventory"
+        android:title="Sync"
+        android:icon="@drawable/baseline_cloud_sync_24"
+        app:showAsAction="ifRoom" />
+
+   <!-- <item
+        android:id="@+id/view_shopping_cart"
+        android:title="View shopping cart"
+        android:orderInCategory="100"
+        android:icon="@drawable/baseline_shopping_cart_24"
+        app:actionLayout="@layout/menu_item_with_badge"
+        app:showAsAction="ifRoom" />
+-->
+</menu>
