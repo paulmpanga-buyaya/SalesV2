@@ -17,7 +17,7 @@ import sales.kiwamirembe.com.classes.Unit;
 
 public class ItemsDatabase extends SQLiteOpenHelper {
 
-    public static final String DATABASE_NAME = "itemsDB_v1_.db";
+    public static final String DATABASE_NAME = "itemsDB_v2_.db";
     public static final int DATABASE_VERSION = 1;
 
     public static final String units_table = "units";

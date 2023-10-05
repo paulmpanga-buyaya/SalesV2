@@ -99,6 +99,7 @@ public class SettingsFragment extends Fragment {
         signOutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 sessionManager.logoutUser();
             }
         });

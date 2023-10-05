@@ -15,7 +15,7 @@ import sales.kiwamirembe.com.classes.InventoryMovement;
 
 public class InventoryDatabase extends SQLiteOpenHelper {
 
-    private static final String DATABASE_NAME = "inventory_db";
+    private static final String DATABASE_NAME = "inventory2_db";
     private static final int DATABASE_VERSION = 1;
 
     public static final String inventory_table = "inventory";

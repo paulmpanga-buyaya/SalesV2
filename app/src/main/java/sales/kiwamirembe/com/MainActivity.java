@@ -45,6 +45,7 @@ import sales.kiwamirembe.com.classes.Inventory;
 import sales.kiwamirembe.com.classes.InventoryMovement;
 import sales.kiwamirembe.com.classes.Item;
 import sales.kiwamirembe.com.classes.SessionManager;
+import sales.kiwamirembe.com.classes.User;
 import sales.kiwamirembe.com.databases.InventoryDatabase;
 import sales.kiwamirembe.com.databases.ItemsDatabase;
 import sales.kiwamirembe.com.databases.SalesDatabase;
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         sessionManager = new SessionManager(this);
-        sessionManager.checkLogin();
+       // sessionManager.checkLogin();
 
         buttonsLayout = findViewById(R.id.buttons);
         itemsDatabase = new ItemsDatabase(this);
@@ -197,7 +198,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void getItems() {
+    public void getItems(int locationID) {
         progressDialog = ProgressDialog.show(MainActivity.this, "", "Fetching items...", true);
         StringRequest request = new StringRequest(Request.Method.POST, GET_ITEMS_URL,
                 new Response.Listener<String>() {
@@ -242,6 +243,7 @@ public class MainActivity extends AppCompatActivity {
                                     // Dismiss the progress dialog
                                     progressDialog.dismiss();
                                     getCategories();
+                                    getInventory(locationID);
                                 }
 
                             } else {
@@ -327,7 +329,6 @@ public class MainActivity extends AppCompatActivity {
                                   //  setupRecyclerView(0);
                                     // Dismiss the progress dialog
                                     progressDialog.dismiss();
-                                    getInventory(1);
                                 }
 
                             } else {

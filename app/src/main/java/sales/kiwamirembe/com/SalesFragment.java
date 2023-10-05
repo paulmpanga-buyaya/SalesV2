@@ -59,6 +59,8 @@ import sales.kiwamirembe.com.classes.CartItem;
 import sales.kiwamirembe.com.classes.Inventory;
 import sales.kiwamirembe.com.classes.InventoryMovement;
 import sales.kiwamirembe.com.classes.Item;
+import sales.kiwamirembe.com.classes.SessionManager;
+import sales.kiwamirembe.com.classes.User;
 import sales.kiwamirembe.com.databases.InventoryDatabase;
 import sales.kiwamirembe.com.databases.ItemsDatabase;
 import sales.kiwamirembe.com.databases.SalesDatabase;
@@ -79,6 +81,8 @@ public class SalesFragment extends Fragment implements InventoryAdapter.Inventor
     InventoryDatabase inventoryDatabase;
 
     private MainActivity mainActivity;
+
+    SessionManager sessionManager;
 
     private androidx.appcompat.app.AlertDialog alertDialog; // Declare the AlertDialog variable
 
@@ -118,6 +122,8 @@ public class SalesFragment extends Fragment implements InventoryAdapter.Inventor
         itemsDatabase = new ItemsDatabase(getActivity());
         inventoryDatabase = new InventoryDatabase(getActivity());
 
+        sessionManager = new SessionManager(getActivity());
+
         recyclerView = rootView.findViewById(R.id.createSaleInventoryRecycler);
         setupRecyclerView();
 
@@ -129,10 +135,12 @@ public class SalesFragment extends Fragment implements InventoryAdapter.Inventor
         amount.setText(String.valueOf(formatter.format(salesDatabase.getTotalCartItemsSum())));
 
         ItemsDatabase databaseHelper1 = new ItemsDatabase(getActivity());
+        // Retrieve the integer value from the intent extras
+        //User user = sessionManager.getUserDetails();
 
         int localRowsItems = databaseHelper1.numberOfRows(ItemsDatabase.items_table);
         if (localRowsItems <= 0){
-            mainActivity.getItems();
+            mainActivity.getItems(4);
         }
 
      /*   int localRows = inventoryDatabase.numberOfRows(InventoryDatabase.inventory_table);

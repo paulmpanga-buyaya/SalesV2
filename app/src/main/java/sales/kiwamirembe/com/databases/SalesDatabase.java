@@ -20,7 +20,7 @@ import sales.kiwamirembe.com.classes.SaleItem;
 
 public class SalesDatabase extends SQLiteOpenHelper {
 
-    public static final String DATABASE_NAME = "salesDB.db";
+    public static final String DATABASE_NAME = "salesDB2.db";
     public static final int DATABASE_VERSION = 1;
 
     public static final String customers_table = "customers";
